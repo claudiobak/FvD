@@ -27,15 +27,13 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je storyboard:
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="storyboard voor opdracht 1">
+  <img src="readme-images/schetsenidee.png" style="max-width: 100%;" alt="storyboard voor opdracht 1">
 
 
   ### Je ambitie: 
   Aan deze technieken/punten wil ik werken:
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Animatie skills met css
+  - Ideeën omzetten in code
  
 </details>
 
@@ -48,19 +46,40 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitomst opdracht 1">
+  <img src="readme-images/tree1" width="375px" alt="uitkomst opdracht 1">
+  <img src="readme-images/tree2" width="375px" alt="uitkomst opdracht 1">
+  <img src="readme-images/tree3" width="375px" alt="uitkomst opdracht 1">
+  <img src="readme-images/tree4" width="375px" alt="uitkomst opdracht 1">
+  <img src="readme-images/tree5" width="375px" alt="uitkomst opdracht 1">
+  <img src="readme-images/tree6" width="375px" alt="uitkomst opdracht 1">
+  
 
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatje(s)
+  Ik heb tijdens het maken van deze opdracht geleerd te werken met keyframes. Ik had er wel eens over gelezen
+  echter heb ik had ik het hiervoor nog niet op deze manier gebruikt. Mijn animatie begint met een boom die schudt,
+  vervolgens vallen de letters van Apple uit de boom waarna het achtergrondscherm omhoog schuift. Vervolgens gaan de
+  letters van Apple op de juiste plek staan maar staat de eerste letter nog scheef. Daarna rolt het logo van Apple
+  richting de letters en botst tegen de eerste letter waardoor deze weer recht staat in plaats van schuin.
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
+  Ook heb ik met mediaqueries het responsive gemaakt. De font-size is op een groter scherm groter, en het logo komt niet
+  helemaal van buiten het scherm rollen maar fade in doormiddel van een opacity.
+
+  Small screen:  
+  <img src="readme-images/appletreesmall.png" width="375px" alt="animatie van apple logo met boom voor klein scherm">
+  <img src="readme-images/appleanimationsmall.png" width="375px" alt="animatie van apple logo met letters voor klein scherm">
+
+  Large screen:  
+  <img src="readme-images/treeapplelarge.png" width="375px" alt="animatie van apple logo met boom voor groot scherm">
+  <img src="readme-images/applelarge.png" width="375px" alt="animatie van apple logo voor met letters groot scherm">
+
 
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatje(s)
+  Ik vond het responsive maken redelijk ingewikkeld, dit kwam doordat ik de letters specifiek voor een screensize had gepositioneerd,
+  echter uiteindelijk is dit toch gelukt.
+  
 
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
 </details>
 
 
