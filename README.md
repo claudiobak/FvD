@@ -46,12 +46,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/tree1" width="375px" alt="uitkomst opdracht 1">
-  <img src="readme-images/tree2" width="375px" alt="uitkomst opdracht 1">
-  <img src="readme-images/tree3" width="375px" alt="uitkomst opdracht 1">
-  <img src="readme-images/tree4" width="375px" alt="uitkomst opdracht 1">
-  <img src="readme-images/tree5" width="375px" alt="uitkomst opdracht 1">
-  <img src="readme-images/tree6" width="375px" alt="uitkomst opdracht 1">
+  <img src="readme-images/tree1.png" width="375px" alt="uitkomst opdracht 1">
+  <img src="readme-images/tree2.png" width="375px" alt="uitkomst opdracht 1">
+  <img src="readme-images/tree3.png" width="375px" alt="uitkomst opdracht 1">
+  <img src="readme-images/tree4.png" width="375px" alt="uitkomst opdracht 1">
+  <img src="readme-images/tree5.png" width="375px" alt="uitkomst opdracht 1">
+  <img src="readme-images/tree6.png" width="375px" alt="uitkomst opdracht 1">
   
 
 
