@@ -40,10 +40,13 @@ button, summary {
 	/* startje */
 	--color-main:black;
 	--color-light:white;
+	--color-sky: #5374de;
 	--color-red-font: red;
 	--main-font: 'Poppins', sans-serif;
 	--font-weight: 700;
 	--font-size: 2em;
+	--filter-tree: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(7487%) hue-rotate(317deg) brightness(92%) contrast(104%);
+	--filter-icons: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(285deg) brightness(106%) contrast(101%);
 }
 
 @media screen and (min-width: 900px) {
@@ -51,9 +54,13 @@ button, summary {
 	/* startje */
 	--color-main:black;
 	--color-light:white;
+	--color-sky: #5374de;
+	--color-red-font: red;
 	--main-font: 'Poppins', sans-serif;
 	--font-weight: 700;
 	--font-size: 4em;
+	--filter-tree: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(7487%) hue-rotate(317deg) brightness(92%) contrast(104%);
+	--filter-icons: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(285deg) brightness(106%) contrast(101%);
 }	
 }
 
@@ -62,21 +69,58 @@ button, summary {
 		/* startje */
 		--color-main:black;
 		--color-light:white;
+		--color-sky: #5374de;
+		--color-red-font: red;
 		--main-font: 'Poppins', sans-serif;
 		--font-weight: 700;
 		--font-size: 6em;
+		--filter-tree: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(7487%) hue-rotate(317deg) brightness(92%) contrast(104%);
+		--filter-icons: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(285deg) brightness(106%) contrast(101%);
 	}	
 }
 
-/* @media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: light) {
 
 	:root {
 		--color-main:white;
 		--color-light:black;
+		--color-sky: #5374de;
+		--color-red-font: red;
 		--main-font: 'Poppins', sans-serif;
 		--font-weight: 700;
+		--filter-tree: brightness(0) saturate(100%) invert(100%) sepia(6%) saturate(0%) hue-rotate(70deg) brightness(108%) contrast(108%);
+		--filter-icons: brightness(0) saturate(100%) invert(0%) sepia(89%) saturate(7500%) hue-rotate(51deg) brightness(88%) contrast(111%);
+
 	}
-} */
+/* 
+	section:first-of-type img:first-of-type {
+		filter: brightness(0) saturate(100%) invert(0%) sepia(5%) saturate(7492%) hue-rotate(142deg) brightness(98%) contrast(101%);
+	}
+
+	section:first-of-type img:last-of-type {
+		filter: brightness(0) saturate(100%) invert(0%) sepia(5%) saturate(7492%) hue-rotate(142deg) brightness(98%) contrast(101%);
+	}
+	
+	body section:nth-of-type(2) img {
+		filter: brightness(0) saturate(100%) invert(99%) sepia(1%) saturate(7179%) hue-rotate(286deg) brightness(130%) contrast(100%);
+	} */
+
+
+
+	/* section:first-of-type img:first-of-type {
+		filter: brightness(0) saturate(100%) invert(0%) sepia(5%) saturate(7492%) hue-rotate(142deg) brightness(98%) contrast(101%);
+	}
+
+	section:first-of-type img:last-of-type {
+		filter: brightness(0) saturate(100%) invert(0%) sepia(5%) saturate(7492%) hue-rotate(142deg) brightness(98%) contrast(101%);
+	}
+	
+	body section:nth-of-type(2) img {
+		background-color: red;
+		-webkit-mask-image: url(/opdracht1/images/tree.svg);
+		mask-image: url(/opdracht1/images/tree.svg);	
+	} */
+}
 
 
 
@@ -95,6 +139,8 @@ button, summary {
 
 main {
 	max-height: 20em;
+	/* background-color: var(--color-light); */
+
 }
 
 body {
@@ -103,7 +149,7 @@ body {
 	font-size: var(--font-size);
 	color: var(--color-red-font);
 	overflow: hidden;
-	background-color: var(--color-light);
+	background-color: var(--color-sky);
 }
 
 body section:first-of-type{
@@ -169,6 +215,8 @@ body section:nth-of-type(2) img{
 	margin-bottom: -.1em;
 	z-index: -1;
 	max-width: 100%;
+	filter: var(--filter-tree);
+	/* filter: brightness(0) saturate(100%) invert(0%) sepia(4%) saturate(7470%) hue-rotate(234deg) brightness(111%) contrast(100%); */
 
 }
 
@@ -675,6 +723,7 @@ section:first-of-type img:first-of-type {
 	position: absolute;
 	z-index: 100;
 	transform: translateX(-60vw) translateY(3.5em);
+	filter: var(--filter-icons);
 
 }
 
@@ -745,6 +794,8 @@ section:first-of-type img:last-of-type {
 	z-index: 100;
 	transform: translateX(-1vw) translateY(4.8em);
 	opacity: 0;
+	filter: var(--filter-icons);
+
 
 }
 
