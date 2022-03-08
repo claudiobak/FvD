@@ -46,12 +46,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/tree1.png" width="375px" alt="uitkomst opdracht 1">
-  <img src="readme-images/tree2.png" width="375px" alt="uitkomst opdracht 1">
-  <img src="readme-images/tree3.png" width="375px" alt="uitkomst opdracht 1">
-  <img src="readme-images/tree4.png" width="375px" alt="uitkomst opdracht 1">
-  <img src="readme-images/tree5.png" width="375px" alt="uitkomst opdracht 1">
-  <img src="readme-images/tree6.png" width="375px" alt="uitkomst opdracht 1">
+  <img src="readme-images/appleanimation1.png" width="375px" alt="uitkomst opdracht 1">
+  <img src="readme-images/appleanimation2.png" width="375px" alt="uitkomst opdracht 1">
+  <img src="readme-images/appleanimation3.png" width="375px" alt="uitkomst opdracht 1">
+  <img src="readme-images/appleanimation4.png" width="375px" alt="uitkomst opdracht 1">
+  <img src="readme-images/appleanimation5.png" width="375px" alt="uitkomst opdracht 1">
+  <img src="readme-images/appleanimation6.png" width="375px" alt="uitkomst opdracht 1">
   
 
 
@@ -66,12 +66,12 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   helemaal van buiten het scherm rollen maar fade in doormiddel van een opacity.
 
   Small screen:  
-  <img src="readme-images/appletreesmall.png" width="375px" alt="animatie van apple logo met boom voor klein scherm">
-  <img src="readme-images/appleanimationsmall.png" width="375px" alt="animatie van apple logo met letters voor klein scherm">
+  <img src="readme-images/appleanimationsmallv1.png" width="375px" alt="animatie van apple logo met boom voor klein scherm">
+  <img src="readme-images/appleanimationsmallv2.png" width="375px" alt="animatie van apple logo met letters voor klein scherm">
 
   Large screen:  
-  <img src="readme-images/treeapplelarge.png" width="375px" alt="animatie van apple logo met boom voor groot scherm">
-  <img src="readme-images/applelarge.png" width="375px" alt="animatie van apple logo voor met letters groot scherm">
+  <img src="readme-images/appleanimationlargev1.png" width="375px" alt="animatie van apple logo met boom voor groot scherm">
+  <img src="readme-images/appleanimationlargev2.png" width="375px" alt="animatie van apple logo voor met letters groot scherm">
 
 
 
