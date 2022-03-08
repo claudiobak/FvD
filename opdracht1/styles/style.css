@@ -12,10 +12,6 @@
 
 }
 
-
-
-
-
 /**************/
 /* CSS REMEDY */
 /**************/
@@ -29,15 +25,11 @@ button, summary {
 	cursor: pointer;
 }
 
-
-
-
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
+
 :root {
-	/* startje */
 	--color-main:black;
 	--color-light:white;
 	--color-sky: #5374de;
@@ -50,23 +42,21 @@ button, summary {
 }
 
 @media screen and (min-width: 900px) {
-:root {
-	/* startje */
-	--color-main:black;
-	--color-light:white;
-	--color-sky: #5374de;
-	--color-red-font: red;
-	--main-font: 'Poppins', sans-serif;
-	--font-weight: 700;
-	--font-size: 4em;
-	--filter-tree: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(7487%) hue-rotate(317deg) brightness(92%) contrast(104%);
-	--filter-icons: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(285deg) brightness(106%) contrast(101%);
-}	
+	:root {
+		--color-main:black;
+		--color-light:white;
+		--color-sky: #5374de;
+		--color-red-font: red;
+		--main-font: 'Poppins', sans-serif;
+		--font-weight: 700;
+		--font-size: 4em;
+		--filter-tree: brightness(0) saturate(100%) invert(0%) sepia(0%) saturate(7487%) hue-rotate(317deg) brightness(92%) contrast(104%);
+		--filter-icons: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(285deg) brightness(106%) contrast(101%);
+	}	
 }
 
 @media screen and (min-width: 1300px) {
 	:root {
-		/* startje */
 		--color-main:black;
 		--color-light:white;
 		--color-sky: #5374de;
@@ -80,7 +70,6 @@ button, summary {
 }
 
 @media (prefers-color-scheme: light) {
-
 	:root {
 		--color-main:white;
 		--color-light:black;
@@ -92,34 +81,6 @@ button, summary {
 		--filter-icons: brightness(0) saturate(100%) invert(0%) sepia(89%) saturate(7500%) hue-rotate(51deg) brightness(88%) contrast(111%);
 
 	}
-/* 
-	section:first-of-type img:first-of-type {
-		filter: brightness(0) saturate(100%) invert(0%) sepia(5%) saturate(7492%) hue-rotate(142deg) brightness(98%) contrast(101%);
-	}
-
-	section:first-of-type img:last-of-type {
-		filter: brightness(0) saturate(100%) invert(0%) sepia(5%) saturate(7492%) hue-rotate(142deg) brightness(98%) contrast(101%);
-	}
-	
-	body section:nth-of-type(2) img {
-		filter: brightness(0) saturate(100%) invert(99%) sepia(1%) saturate(7179%) hue-rotate(286deg) brightness(130%) contrast(100%);
-	} */
-
-
-
-	/* section:first-of-type img:first-of-type {
-		filter: brightness(0) saturate(100%) invert(0%) sepia(5%) saturate(7492%) hue-rotate(142deg) brightness(98%) contrast(101%);
-	}
-
-	section:first-of-type img:last-of-type {
-		filter: brightness(0) saturate(100%) invert(0%) sepia(5%) saturate(7492%) hue-rotate(142deg) brightness(98%) contrast(101%);
-	}
-	
-	body section:nth-of-type(2) img {
-		background-color: red;
-		-webkit-mask-image: url(/opdracht1/images/tree.svg);
-		mask-image: url(/opdracht1/images/tree.svg);	
-	} */
 }
 
 
@@ -139,8 +100,6 @@ button, summary {
 
 main {
 	max-height: 20em;
-	/* background-color: var(--color-light); */
-
 }
 
 body {
@@ -167,12 +126,9 @@ body section:nth-of-type(2){
 	justify-content: center;
 	display: flex;
 	align-items: center;
-
 	animation: lettershake;
-
 	animation-duration: 6s;
 	animation-delay: 2.5s;
-
 }
 
 
@@ -192,10 +148,7 @@ body section:nth-of-type(2){
 	80%{
 		transform: translateX(0%) rotate(0deg);
 	}
-
 }
-
-
 
 /* //////////////////////////////// */
 /*//////  Section tree     ///// */
@@ -216,8 +169,6 @@ body section:nth-of-type(2) img{
 	z-index: -1;
 	max-width: 100%;
 	filter: var(--filter-tree);
-	/* filter: brightness(0) saturate(100%) invert(0%) sepia(4%) saturate(7470%) hue-rotate(234deg) brightness(111%) contrast(100%); */
-
 }
 
 body section:nth-of-type(3) {
@@ -228,7 +179,6 @@ body section:nth-of-type(3) {
 	animation-duration: 6s;
 	animation-delay: 2.5s;
 	animation-fill-mode: forwards;
-
 	z-index: -300;
 	position: relative;
 
@@ -275,9 +225,7 @@ body section:nth-of-type(3) {
 	100%{
 		transform: translateY(-50%);
 		height: 50em;
-
 	}
-
 }
 
 @keyframes changeopacity {
@@ -309,21 +257,15 @@ body section:nth-of-type(3) {
 	}
 }
 
-
-
-
 /* //////////////////////////////// */
 /*//////  APPLE LETTER A      ///// */
 /* //////////////////////////////// */
 
 body section:first-of-type > span:nth-of-type(1){
-
 	animation: letterA;
 	animation-duration: 5s;
 	animation-delay: 1.3s;
 	animation-fill-mode: forwards;
-
-
 	display: inline-block;
 }
 
@@ -350,13 +292,11 @@ body section:first-of-type > span:nth-of-type(1){
 	80%{
 		transform: translateY(5em);
 		color: var(--color-light);
-
 	}
 
 	100%{
 		transform: translateY(5em);
 		color: var(--color-light);
-
 	}
 
 }
@@ -385,21 +325,14 @@ body section:first-of-type > span:nth-of-type(1){
 	80%{
 		transform: translateY(1em);
 		color: var(--color-light);
-
 	}
 
 	100%{
 		transform: translateY(1em);
 		color: var(--color-light);
-
 	}
-
 }
 }
-
-
-
-
 
 /* //////////////////////////////// */
 /*//////  APPLE LETTER P.1    ///// */
@@ -410,8 +343,6 @@ body section:first-of-type > span:nth-of-type(2){
 	animation-duration: 5s;
 	animation-delay: 1.3s;
 	animation-fill-mode: forwards;
-
-
 	display: inline-block;
 }
 
@@ -434,15 +365,12 @@ body section:first-of-type > span:nth-of-type(2){
 	80%{
 		transform: translateY(5em);
 		color: var(--color-light);
-
 	}
 
 	100%{
 		transform: translateY(5em);
 		color: var(--color-light);
-
 	}
-
 }
 
 
@@ -462,20 +390,15 @@ body section:first-of-type > span:nth-of-type(2){
 		60%{
 			transform: translateY(1em);
 			color: var(--color-light);
-	
 		}
 		80%{
 			transform: translateY(1em);
 			color: var(--color-light);
-	
 		}
-	
 		100%{
 			transform: translateY(1em);
 			color: var(--color-light);
-	
 		}
-	
 	}	
 }
 
@@ -507,20 +430,16 @@ body section:first-of-type > span:nth-of-type(3){
 	60%{
 		transform: translateY(5em);
 		color: var(--color-light);
-
 	}
 	80%{
 		transform: translateY(5em);
 		color: var(--color-light);
-
 	}
 
 	100%{
 		transform: translateY(5em);
 		color: var(--color-light);
-
 	}
-
 }
 
 @media screen and (min-width: 900px) {
@@ -549,7 +468,6 @@ body section:first-of-type > span:nth-of-type(3){
 	100%{
 		transform: translateY(1em);
 		color: var(--color-light);
-
 	}
 }
 }
@@ -563,8 +481,6 @@ body section:first-of-type > span:nth-of-type(4){
 	animation-duration: 5s;
 	animation-delay: 1.3s;
 	animation-fill-mode: forwards;
-
-
 	display: inline-block;
 }
 
@@ -582,20 +498,16 @@ body section:first-of-type > span:nth-of-type(4){
 	60%{
 		transform: translateY(5em);
 		color: var(--color-light);
-
 	}
 	80%{
 		transform: translatey(5em);
 		color: var(--color-light);
-
 	}
 
 	100%{
 		transform: translateY(5em);
 		color: var(--color-light);
-
 	}
-
 }
 
 @media screen and (min-width: 900px) {
@@ -613,20 +525,15 @@ body section:first-of-type > span:nth-of-type(4){
 		60%{
 			transform: translateY(1em);
 			color: var(--color-light);
-	
 		}
 		80%{
 			transform: translatey(1em);
 			color: var(--color-light);
-	
 		}
-	
 		100%{
 			transform: translateY(1em);
 			color: var(--color-light);
-	
 		}
-	
 	}	
 }
 
@@ -639,8 +546,6 @@ body section:first-of-type > span:nth-of-type(5){
 	animation-duration: 5s;
 	animation-delay: 1.2s;
 	animation-fill-mode: forwards;
-
-
 	display: inline-block;
 }
 
@@ -659,18 +564,15 @@ body section:first-of-type > span:nth-of-type(5){
 	60%{
 		transform: translateY(5em);
 		color: var(--color-light);
-
 	}
 	80%{
 		transform: translateY(5em);
 		color: var(--color-light);
-
 	}
 
 	100%{
 		transform: translateY(5em);
 		color: var(--color-light);
-
 	}
 
 }
@@ -680,31 +582,24 @@ body section:first-of-type > span:nth-of-type(5){
 		0%{
 			transform: translatey(0%) translateX(0%);
 		}
-
 		30%{
 			transform: translatey(4em) translateX(2em);
 		}
-	
 		50%{
 			transform: translateY(1em);
 		}
 		60%{
 			transform: translateY(1em);
 			color: var(--color-light);
-	
 		}
 		80%{
 			transform: translateY(1em);
 			color: var(--color-light);
-	
 		}
-	
 		100%{
 			transform: translateY(1em);
 			color: var(--color-light);
-	
 		}
-	
 	}
 }
 
@@ -717,14 +612,12 @@ section:first-of-type img:first-of-type {
 	width: 2em;
 	animation-name: appleroll;
 	animation-fill-mode: forwards;
-
 	animation-delay: 3.8s;
 	animation-duration: 3s;
 	position: absolute;
 	z-index: 100;
 	transform: translateX(-60vw) translateY(3.5em);
 	filter: var(--filter-icons);
-
 }
 
 @keyframes appleroll {
@@ -732,7 +625,6 @@ section:first-of-type img:first-of-type {
 		transform: translateX(-60vw) translateY(3.5em) rotate(0deg);
 		opacity: 0;
 	}
-
 	37%{
 		transform: translateX(-1.3em) translateY(3.5em) rotate(440deg);
 		opacity: 1;
@@ -759,7 +651,6 @@ section:first-of-type img:first-of-type {
 			transform: translateX(-20vw) translateY(-0.4em) rotate(0deg);
 			opacity: 0;
 		}
-
 		37%{
 			transform: translateX(-1.3em) translateY(-0.4em) rotate(440deg);
 			opacity: 1;
@@ -787,7 +678,6 @@ section:first-of-type img:last-of-type {
 	width: .6em;
 	animation-name: blink;
 	animation-fill-mode: forwards;
-
 	animation-delay: 5s;
 	animation-duration: 1s;
 	position: absolute;
@@ -795,19 +685,15 @@ section:first-of-type img:last-of-type {
 	transform: translateX(-1vw) translateY(4.8em);
 	opacity: 0;
 	filter: var(--filter-icons);
-
-
 }
 
 @keyframes blink {
 	0%{
 		opacity: 0;
 	}
-
 	40%{
 		opacity: 0;
 	}
-
 	70%{
 		opacity: 1;
 	}
@@ -824,14 +710,11 @@ section:first-of-type img:last-of-type {
 		width: .6em;
 		animation-name: blink;
 		animation-fill-mode: forwards;
-	
 		animation-delay: 5s;
 		animation-duration: 1s;
 		position: absolute;
 		z-index: 100;
-
 		transform: translateX(-0.7vw) translateY(0.8em);		
 		opacity: 0;
-	
 	}
 }
