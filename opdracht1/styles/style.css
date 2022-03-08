@@ -38,8 +38,9 @@ button, summary {
 /*********************/
 :root {
 	/* startje */
-	--color-main:#111;
-	--color-background:#eee;
+	--color-main:black;
+	--color-light:white;
+	--color-red-font: red;
 	--main-font: 'Poppins', sans-serif;
 	--font-weight: 700;
 	--font-size: 2em;
@@ -48,13 +49,34 @@ button, summary {
 @media screen and (min-width: 900px) {
 :root {
 	/* startje */
-	--color-main:#111;
-	--color-background:#eee;
+	--color-main:black;
+	--color-light:white;
 	--main-font: 'Poppins', sans-serif;
 	--font-weight: 700;
 	--font-size: 4em;
 }	
 }
+
+@media screen and (min-width: 1300px) {
+	:root {
+		/* startje */
+		--color-main:black;
+		--color-light:white;
+		--main-font: 'Poppins', sans-serif;
+		--font-weight: 700;
+		--font-size: 6em;
+	}	
+}
+
+/* @media (prefers-color-scheme: light) {
+
+	:root {
+		--color-main:white;
+		--color-light:black;
+		--main-font: 'Poppins', sans-serif;
+		--font-weight: 700;
+	}
+} */
 
 
 
@@ -79,8 +101,9 @@ body {
 	font-family: var(--main-font);
 	font-weight: var(--font-weight);
 	font-size: var(--font-size);
-	color: red;
+	color: var(--color-red-font);
 	overflow: hidden;
+	background-color: var(--color-light);
 }
 
 body section:first-of-type{
@@ -151,7 +174,7 @@ body section:nth-of-type(2) img{
 
 body section:nth-of-type(3) {
 	height: 30em;
-	background-color: black;
+	background-color: var(--color-main);
 	width: 100%;
 	animation-name: groundup;
 	animation-duration: 6s;
@@ -269,22 +292,22 @@ body section:first-of-type > span:nth-of-type(1){
 	}
 	60%{
 		transform: translatey(5em) rotate(-50deg);
-		color: white;
+		color: var(--color-light);
 	}
 	70%{
 		transform: translatey(5em) rotate(-50deg);
-		color: white;
+		color: var(--color-light);
 
 	}
 	80%{
 		transform: translateY(5em);
-		color: white;
+		color: var(--color-light);
 
 	}
 
 	100%{
 		transform: translateY(5em);
-		color: white;
+		color: var(--color-light);
 
 	}
 
@@ -304,22 +327,22 @@ body section:first-of-type > span:nth-of-type(1){
 	}
 	60%{
 		transform: translatey(1em) rotate(-50deg);
-		color: white;
+		color: var(--color-light);
 	}
 	70%{
 		transform: translatey(1em) rotate(-50deg);
-		color: white;
+		color: var(--color-light);
 
 	}
 	80%{
 		transform: translateY(1em);
-		color: white;
+		color: var(--color-light);
 
 	}
 
 	100%{
 		transform: translateY(1em);
-		color: white;
+		color: var(--color-light);
 
 	}
 
@@ -357,18 +380,18 @@ body section:first-of-type > span:nth-of-type(2){
 	}
 	60%{
 		transform: translateY(5em);
-		color: white;
+		color: var(--color-light);
 
 	}
 	80%{
 		transform: translateY(5em);
-		color: white;
+		color: var(--color-light);
 
 	}
 
 	100%{
 		transform: translateY(5em);
-		color: white;
+		color: var(--color-light);
 
 	}
 
@@ -390,18 +413,18 @@ body section:first-of-type > span:nth-of-type(2){
 		}
 		60%{
 			transform: translateY(1em);
-			color: white;
+			color: var(--color-light);
 	
 		}
 		80%{
 			transform: translateY(1em);
-			color: white;
+			color: var(--color-light);
 	
 		}
 	
 		100%{
 			transform: translateY(1em);
-			color: white;
+			color: var(--color-light);
 	
 		}
 	
@@ -435,18 +458,18 @@ body section:first-of-type > span:nth-of-type(3){
 	}
 	60%{
 		transform: translateY(5em);
-		color: white;
+		color: var(--color-light);
 
 	}
 	80%{
 		transform: translateY(5em);
-		color: white;
+		color: var(--color-light);
 
 	}
 
 	100%{
 		transform: translateY(5em);
-		color: white;
+		color: var(--color-light);
 
 	}
 
@@ -466,18 +489,18 @@ body section:first-of-type > span:nth-of-type(3){
 	}
 	60%{
 		transform: translateY(1em);
-		color: white;
+		color: var(--color-light);
 
 	}
 	80%{
 		transform: translateY(1em);
-		color: white;
+		color: var(--color-light);
 
 	}
 
 	100%{
 		transform: translateY(1em);
-		color: white;
+		color: var(--color-light);
 
 	}
 }
@@ -510,18 +533,18 @@ body section:first-of-type > span:nth-of-type(4){
 	}
 	60%{
 		transform: translateY(5em);
-		color: white;
+		color: var(--color-light);
 
 	}
 	80%{
 		transform: translatey(5em);
-		color: white;
+		color: var(--color-light);
 
 	}
 
 	100%{
 		transform: translateY(5em);
-		color: white;
+		color: var(--color-light);
 
 	}
 
@@ -541,18 +564,18 @@ body section:first-of-type > span:nth-of-type(4){
 		}
 		60%{
 			transform: translateY(1em);
-			color: white;
+			color: var(--color-light);
 	
 		}
 		80%{
 			transform: translatey(1em);
-			color: white;
+			color: var(--color-light);
 	
 		}
 	
 		100%{
 			transform: translateY(1em);
-			color: white;
+			color: var(--color-light);
 	
 		}
 	
@@ -587,18 +610,18 @@ body section:first-of-type > span:nth-of-type(5){
 	}
 	60%{
 		transform: translateY(5em);
-		color: white;
+		color: var(--color-light);
 
 	}
 	80%{
 		transform: translateY(5em);
-		color: white;
+		color: var(--color-light);
 
 	}
 
 	100%{
 		transform: translateY(5em);
-		color: white;
+		color: var(--color-light);
 
 	}
 
@@ -619,18 +642,18 @@ body section:first-of-type > span:nth-of-type(5){
 		}
 		60%{
 			transform: translateY(1em);
-			color: white;
+			color: var(--color-light);
 	
 		}
 		80%{
 			transform: translateY(1em);
-			color: white;
+			color: var(--color-light);
 	
 		}
 	
 		100%{
 			transform: translateY(1em);
-			color: white;
+			color: var(--color-light);
 	
 		}
 	
@@ -642,7 +665,7 @@ body section:first-of-type > span:nth-of-type(5){
 /*//////  APPLE ROLLING      ///// */
 /* //////////////////////////////// */
 
-section:first-of-type img {
+section:first-of-type img:first-of-type {
 	width: 2em;
 	animation-name: appleroll;
 	animation-fill-mode: forwards;
@@ -679,8 +702,6 @@ section:first-of-type img {
 	}
 }
 
-/* voeg nog een star blink toe die na alle animaties afspeelt 
-(met opacity) */
 
 @media screen and (min-width: 900px) {
 
@@ -706,5 +727,60 @@ section:first-of-type img {
 			transform: translateX(-2.5em) translateY(-0.4em) rotate(360deg);
 			opacity: 1;
 		}
+	}
+}
+
+/* //////////////////////////////// */
+/*//////      STAR BLINK      ///// */
+/* //////////////////////////////// */
+
+section:first-of-type img:last-of-type {
+	width: .6em;
+	animation-name: blink;
+	animation-fill-mode: forwards;
+
+	animation-delay: 5s;
+	animation-duration: 1s;
+	position: absolute;
+	z-index: 100;
+	transform: translateX(-1vw) translateY(4.8em);
+	opacity: 0;
+
+}
+
+@keyframes blink {
+	0%{
+		opacity: 0;
+	}
+
+	40%{
+		opacity: 0;
+	}
+
+	70%{
+		opacity: 1;
+	}
+	80%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+	}
+}
+
+@media screen and (min-width: 900px) {
+	section:first-of-type img:last-of-type {
+		width: .6em;
+		animation-name: blink;
+		animation-fill-mode: forwards;
+	
+		animation-delay: 5s;
+		animation-duration: 1s;
+		position: absolute;
+		z-index: 100;
+
+		transform: translateX(-0.7vw) translateY(0.8em);		
+		opacity: 0;
+	
 	}
 }
