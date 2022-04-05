@@ -161,7 +161,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Dit was lastig/Is niet gelukt:
   Wat ik erg lastig vond was het werkend maken van de favoritelist. Dit kwam omdat ik uiteindelijk vast liep op het gedeelte waarbij de user een film uit de favorite-list heeft gehaald. Het hartje moest namelijk ook weer leeg worden. Uiteindelijk is dit me toch gelukt.
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
 </details>
 
 ## Bronnen plaatjes:
