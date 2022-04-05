@@ -153,18 +153,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken bij afronden opdracht (voor week 8)</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="uitkomst opdracht 2">
-
+  <img src="readme-images/opdracht2-page.png" width="375px" alt="uitkomst opdracht 2">
+  <img src="readme-images/opdracht2-smallscreen.png" width="375px" alt="uitkomst opdracht 2">
 
   ### Dit ging goed/Heb ik geleerd: 
-  Korte omschrijving met plaatje(s)
-
-  <img src="readme-images/dummy-plaatje.svg" width="375px" alt="top">
-
+  De CSS ging erg goed. Ik heb zo de dark/lightmodus weten te implementeren, ook heb ik alles volledig responsive gekregen. Voor de layout heb ik weer Grid gebruikt omdat ik dit persoonlijk erg prettig vind werken samen met de mediaqueries.
 
   ### Dit was lastig/Is niet gelukt:
-  Korte omschrijving met plaatje(s)
-
+  Wat ik erg lastig vond was het werkend maken van de favoritelist. Dit kwam omdat ik uiteindelijk vast liep op het gedeelte waarbij de user een film uit de favorite-list heeft gehaald. Het hartje moest namelijk ook weer leeg worden. Uiteindelijk is dit me toch gelukt.
   <img src="readme-images/dummy-plaatje.svg" width="375px" alt="bummer">
 </details>
 
