@@ -11,15 +11,6 @@ Nb. De standaardstructuur en de spartaanse opmaak van de README.md zijn helemaal
 
 Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard open zetten. Fijn om dat steeds voor de relevante stuk(ken) te doen. -->
 
-
-
-## Bronnenlijst
-  1. -bron 1-
-  2. -bron 2-
-  3. -...-
-
-
-
 ## Opdracht 1 plan
 
 <details open>
