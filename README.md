@@ -155,6 +155,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Je uitkomst - karakteristiek screenshot(s):
   <img src="readme-images/imgopdracht2-page.png" width="375px" alt="uitkomst opdracht 2">
   <img src="readme-images/opdracht2-smallscreen.png" width="375px" alt="uitkomst opdracht 2">
+  <img src="readme-images/opdracht2-favlist.png" width="375px" alt="uitkomst opdracht 2">
+
 
   ### Dit ging goed/Heb ik geleerd: 
   De CSS ging erg goed. Ik heb zo de dark/lightmodus weten te implementeren, ook heb ik alles volledig responsive gekregen. Voor de layout heb ik weer Grid gebruikt omdat ik dit persoonlijk erg prettig vind werken samen met de mediaqueries.
