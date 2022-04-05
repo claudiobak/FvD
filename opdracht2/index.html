@@ -1,21 +1,310 @@
-<!doctype html>
-<html lang="nl">
-	
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="author" content="jouw naam">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
-	<title>Opdracht 2: Interactie galore - Frontend voor Designers</title>
-	
-	<link href="styles/style.css" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <title>Movie app</title>
 </head>
-
 <body>
-	<h1>Opdracht 2</h1>
+    <main id="theList">
 
-	<script src="scripts/script.js"></script>
+
+
+    <header>
+      <h1>Movie app</h1>
+      <a class="wishlist" id="open" href="javascript:;" title="wishlist" >&#10084;<span>0</span></a>	
+
+        
+    </header>
+
+    <section id="favlist">
+      <!-- wishlist moet hier gevuld worden -->
+      <div>
+      <h2>Favorites</h2>
+      <button id="close">✖</button>
+      </div>
+
+      <ul id="favlistitems">
+
+      </ul>
+
+    </section>
+
+    <aside>
+
+    <input type="search" class="search" placeholder="Search">
+    
+    </aside>
+
+    <section>
+        <!-- bij het openen van de pagina geen filter -> all -->
+        <div>
+        <input type="radio" name="filter" value="all" id="filter-all" checked>
+        <label for="filter-all">all</label>
+        </div>
+        <!-- de values van de radio buttons worden zo gebruikt om te filteren -->
+        <div>
+        <input type="radio" name="filter" value="people" id="filter-people">
+        <label for="filter-people">populair</label>
+        </div>
+
+        <div>
+        <input type="radio" name="filter" value="animals" id="filter-animals">
+        <label for="filter-animals">action</label>
+        </div>
+
+        <div>
+        <input type="radio" name="filter" value="items" id="filter-items">
+        <label for="filter-items">comedy</label>
+        </div>
+
+      </section>
+
+
+      <ul class="list" id="mainlist">
+    
+        <!-- elke li heeft een class die aangeeft wat voor type film het is -->
+        <li class="animal" id="movie-1">
+
+          <img src="./images/movieimg-fistfullofvengeance.png" alt="movie preview image">
+          <button class="wish" aria-label="Add to Favorites">&#9825;</button>
+          
+          <h2>Bange leeuw</h2>
+          <p>Wizard of Oz</p>
+        </li>
+        
+        <li class="person" id="movie-2">
+
+          <img src="./images/movieimg.jpg" alt="movie preview image">
+          <button class="wish" aria-label="Add to Favorites">&#9825;</button>
+          <h2 class="name">Count Dracula</h2>
+          <p class="movie">Dracula</p>
+        </li>
+        
+        <li class="person" id="movie-3">
+
+          <img src="./images/movieimg.jpg" alt="movie preview image">
+          <button class="wish" aria-label="Add to Favorites">&#9825;</button>
+          <h2 class="name">Gandalf</h2>
+          <p class="movie">De Hobbit</p>
+        </li>
+        
+        <li class="person" id="movie-4">
+
+          <img src="./images/movieimg.jpg" alt="movie preview image">
+          <button class="wish" aria-label="Add to Favorites">&#9825;</button>
+          <h2 class="name">Geest</h2>
+          <p class="movie">Aladdin</p>
+        </li>
+        
+        <li class="item" id="movie-5">
+          <img src="./images/movieimg.jpg" alt="movie preview image">
+          <button class="wish" aria-label="Add to Favorites">&#9825;</button>
+          <h2 class="name">Giftige apple</h2>
+          <p class="movie">Sneeuwwitje</p>
+
+        </li>
+        
+        <li class="person" id="movie-6">
+          <img src="./images/movieimg.jpg" alt="movie preview image">
+          <button class="wish" aria-label="Add to Favorites">&#9825;</button>
+
+          <h2 class="name">Heks van het westen</h2>
+          <p class="movie">Wizard of Oz</p>
+
+        </li>
+        
+        <li class="person" id="movie-7">
+          <img src="./images/movieimg.jpg" alt="movie preview image">
+          <button class="wish" aria-label="Add to Favorites">&#9825;</button>
+
+          <h2 class="name">Hoedenmaker</h2>
+          <p class="movie">Alice in Wonderland</p>
+
+        </li>
+        
+        <li class="animal" id="movie-8">
+          <img src="./images/movieimg.jpg" alt="movie preview image">
+          <button class="wish" aria-label="Add to Favorites">&#9825;</button>
+
+          <h2 class="name">Knar</h2>
+          <p class="movie">Drie kleine biggetjes</p>
+
+        </li>
+        
+        <li class="animal" id="movie-9">
+          <img src="./images/movieimg.jpg" alt="movie preview image">
+          <button class="wish" aria-label="Add to Favorites">&#9825;</button>
+
+          <h2 class="name">Knir</h2>
+          <p class="movie">Drie kleine biggetjes</p>
+
+        </li>
+        
+        <li class="animal" id="movie-10">
+          <img src="./images/movieimg.jpg" alt="movie preview image">
+          <button class="wish" aria-label="Add to Favorites">&#9825;</button>
+
+          <h2 class="name">Knor</h2>
+          <p class="movie">Drie kleine biggetjes</p>
+
+        </li>
+        
+        <li class="person" id="movie-11">
+          <img src="./images/movieimg.jpg" alt="movie preview image">
+          <button class="wish" aria-label="Add to Favorites">&#9825;</button>
+
+          <h2 class="name">Koningin</h2>
+          <p class="movie">Sneeuwwitje</p>
+
+        </li>
+        
+        <li class="item" id="movie-12">
+          <img src="./images/movieimg.jpg" alt="movie preview image">
+          <button class="wish" aria-label="Add to Favorites">&#9825;</button>
+
+          <h2 class="name">Lamp</h2>
+          <p class="movie">Aladdin</p>
+
+        </li>
+        
+        <li class="item" id="movie-13">
+          <img src="./images/movieimg.jpg" alt="movie preview image">
+          <button class="wish" aria-label="Add to Favorites">&#9825;</button>
+
+          <h2 class="name">Magische spiegel</h2>
+          <p class="movie">Sneeuwwitje</p>
+
+        </li>
+        
+        <li class="person" id="movie-14">
+          <img src="./images/movieimg.jpg" alt="movie preview image">
+          <button class="wish" aria-label="Add to Favorites">&#9825;</button>
+
+          <h2 class="name">Pinocchio</h2>
+          <p class="movie">Pinocchio</p>
+
+        </li>
+        
+        <li class="person" id="movie-15">
+          <img src="./images/movieimg.jpg" alt="movie preview image">
+          <button class="wish" aria-label="Add to Favorites">&#9825;</button>
+
+          <h2 class="name">Prins</h2>
+          <p class="movie">Sneeuwwitje</p>
+
+        </li>
+        
+        <li class="person" id="movie-16">
+          <img src="./images/movieimg.jpg" alt="movie preview image">
+          <button class="wish" aria-label="Add to Favorites">&#9825;</button>
+
+          <h2 class="name">Roodkapje</h2>
+          <p class="movie">Roodkapje</p>
+
+        </li>
+        
+        <li class="animal" id="movie-17">
+          <img src="./images/movieimg.jpg" alt="movie preview image">
+          <button class="wish" aria-label="Add to Favorites">&#9825;</button>
+
+          <h2 class="name">Smaug</h2>
+          <p class="movie">De Hobbit</p>
+
+        </li>
+        
+        <li class="person" id="movie-18">
+          <img src="./images/movieimg.jpg" alt="movie preview image">
+          <button class="wish" aria-label="Add to Favorites">&#9825;</button>
+
+          <h2 class="name">Sneeuwwitje</h2>
+          <p class="movie">Sneeuwwitje</p>
+
+        </li>
+        
+        <li class="person" id="movie-19">
+          <img src="./images/movieimg.jpg" alt="movie preview image">
+          <button class="wish" aria-label="Add to Favorites">&#9825;</button>
+
+          <h2 class="name">Tauriel</h2>
+          <p class="movie">De Hobbit</p>
+
+        </li>
+        
+        <li class="person" id="movie-20">
+          <img src="./images/movieimg.jpg" alt="movie preview image">
+          <button class="wish" aria-label="Add to Favorites">&#9825;</button>
+
+          <h2 class="name">Thorin</h2>
+          <p class="movie">De Hobbit</p>
+
+        </li>
+        
+        <li class="person" id="movie-22">
+          <img src="./images/movieimg.jpg" alt="movie preview image">
+          <button class="wish" aria-label="Add to Favorites">&#9825;</button>
+
+          <h2 class="name">Tinnen man</h2>
+          <p class="movie">Wizard of Oz</p>
+
+        </li>
+        
+        <li class="person" id="movie-23">
+          <img src="./images/movieimg.jpg" alt="movie preview image">
+          <button class="wish" aria-label="Add to Favorites">&#9825;</button>
+
+          <h2 class="name">Vogelverschrikker</h2>
+          <p class="movie">Wizard of Oz</p>
+
+        </li>
+        
+        <li class="animal" id="movie-24">
+          <img src="./images/movieimg.jpg" alt="movie preview image">
+          <button class="wish" aria-label="Add to Favorites">&#9825;</button>
+
+          <h2 class="name">Witte konijn</h2>
+          <p class="movie">Alice in Wonderland</p>
+
+        </li>
+        
+        <li class="animal" id="movie-25">
+          <img src="./images/movieimg.jpg" alt="movie preview image">
+          <button class="wish" aria-label="Add to Favorites">&#9825;</button>
+
+          <h2 class="name">Wolf</h2>
+          <p class="movie">Drie kleine biggetjes</p>
+
+        </li>
+        
+        <li class="animal" id="movie-26">
+          <img src="./images/movieimg.jpg" alt="movie preview image">
+          <button class="wish" aria-label="Add to Favorites">&#9825;</button>
+
+          <h2 class="name">Wolf</h2>
+          <p class="movie">Roodkapje</p>
+
+        </li>
+        
+      </ul>
+
+    <section>
+
+    </section>
+ </main>   
+
+ <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+
+ <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+
+ <script src="scripts/script.js"></script>
+
 </body>
-	
 </html>

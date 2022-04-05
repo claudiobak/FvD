@@ -1,57 +1,407 @@
-/* CSS Document */
-
-/*********/
-/* FONTS */
-/*********/
-@font-face {
-	font-family: 'eenfont';
-	src: url('../fonts/eenfont.woff2') format('woff2'),
-			 url('../fonts/eenfont.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-
-}
-
-
-
-
-
-/**************/
-/* CSS REMEDY */
-/**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
-}
-
-button, summary {
-	cursor: pointer;
-}
-
-
-
-
-
-/*********************/
-/* CUSTOM PROPERTIES */
-/*********************/
 :root {
-	/* startje */
-	--color-main:#111;
-	--color-background:#eee;
+    /* fonts */
+    --main-font: 'Poppins', sans-serif;
+
+    /* colors*/
+    --main-clr: #151E2A;
+    --light-clr: white;
+    --secondary-clr:#464D57;
+    --bright-clr: #555FF1;
+
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-
-
-
-/****************/
-/* JOUW STYLING */
-/****************/
 body {
-  font-family:eenfont, sans-serif;
-  color:var(--color-main);
-  background-color:var(--color-background);
+    background-color: var(--main-clr);
+    max-width: 100%;
 }
 
-/* jouw code */
+/* /////////////////// */
+/* ///// header ///// /*/
+/* /////////////////// */
 
+header {
+    padding: 0 calc((100% - 80em) / 2);
+    display: flex;
+    justify-content: space-between;
+
+    /* background-color: #141a24; */
+    background-color: #000307;
+    position: fixed;
+    width: 100%;
+    z-index: 91;
+
+}
+
+
+h1 {
+    font-family: var(--main-font);
+    color: var(--light-clr);
+    font-size: 2em;
+    padding: 1em 1em 0em 1em;
+
+}
+
+/* ////////////////////////////// */
+/* ///// Favorites button ///// /*/
+/* ///////////////////////////// */
+
+/* de animatie voor zowel het hartje als het winkelwagentje */
+/* de link wordt even iets groter en dan weer het normale formaat */
+@keyframes updating {
+    0% { transform:scale(1); }
+    50% { transform:scale(1.5); }
+    100% { transform:scale(1); }
+  }
+
+main header a {
+    position:relative;
+    /* padding:.125em .375em; */
+    /* padding: 1.125em .375em; */
+    padding: 0.125em 0.675em;
+    border-radius:.25rem;
+    font-size:2em;
+    /* line-height:1em; */
+    line-height: 3em;
+    text-decoration:none;
+    color: #fff;
+}
+  
+/* main header a:hover {
+    background-color:var(--hover-color);
+}   */
+
+
+/* met js wort de class updates toegevoegd als de koopknop of hartje wordt geklikt */
+/* dan wordt de animatie geactiveerd */
+main header a.updated {
+    animation-name:updating;
+    animation-duration:.5s;
+    
+    /* met transform-orgin kun je aangeven tov van welk punt transforms worden toegepast - default is dat het midden ven een element */
+    /* met center top zorg je ervoor dat het gele hartje en de winkelwagen van middenboven naar beneden groter worden */
+    transform-origin:center top;
+  }  
+
+
+/* getalletjes */
+main header a span {
+    position:absolute;
+    right: 1em;
+    /* top:-.125em; */
+    top: 2.875em;
+
+    min-width:1.25em;
+    padding:0 .25em;
+    
+    background-color: #555FF1;
+    border-radius:.625em;
+    
+    font-size:.375em;
+    font-family: var(--main-font);
+    text-align:center;
+    line-height:1.25em;
+    color:var(--main-inverse-color);
+    
+    /* initieel is de waarde in de rode bolletjes 0 */
+    /* dan worden ze verborgen */
+    display:none;
+  }
+  
+  /* indien de waarde van de span in de winkelwagen groter dan 0 is */
+  /* wordt met JS de class 'positive' toegevoegd */
+  /* die kan hier gebruikt worden om het rode bolletje te tonen */
+  main header a span.positive {
+    display:block;
+  }
+  
+  
+
+
+/* /////////////////////// */
+/* ///// Searchbar ///// /*/
+/* ///////////////////// */
+
+  aside {
+    top:0;
+    padding: 1em;
+    color: white;
+    padding-top: 8em;
+  }
+  
+  aside input {
+    width:100%;
+    max-width: 24em;
+    height: 3em;
+    padding: .5em;
+    border-radius: .5em;
+    font-size: 1em;
+    color: white;
+    background-color: #4F5E72;
+    font-family: var(--main-font);
+    border: none;
+
+  }
+
+  aside input::placeholder {
+    color: var(--main-clr);
+    font-weight: 600;
+  }
+
+  aside input span {
+    width: 1em;   
+  }
+
+/* ///////////////////////////// */
+/* ///// Category filter ///// /*/
+/* /////////////////// /////////*/
+
+section:nth-of-type(2) {
+    /* padding: 1em; */
+    padding: 0 calc((100% - 80em) / 2);
+
+    /* margin-bottom: 2em; */
+    margin-bottom: 10em;
+    width: 100%;
+}
+
+
+section:nth-of-type(2) div {
+    float: left;
+    /* margin: 0 5px 0 0; */
+    width: 100px;
+    height: 40px;
+    position: relative;
+    font-family: var(--main-font);
+    color: var(--light-clr);
+    padding: 1em;
+    margin: 1em;
+    text-align: center;
+}
+
+section:nth-of-type(2) div label,
+section:nth-of-type(2) div input{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+}
+
+section:nth-of-type(2) div input[type="radio"] {
+    opacity: 0.011;
+    z-index: 100;
+}
+
+
+section:nth-of-type(2) div input[type="radio"]:checked + label {
+    background: var(--bright-clr);
+    border-radius: .5em;
+}  
+
+
+section:nth-of-type(2) div label {
+    cursor: pointer;
+    z-index: 90;
+    line-height: 2.4em;
+    transition: .2s ease;
+    background-color: #4F5E72;
+    border-radius: .5em;
+
+  }
+
+  section:nth-of-type(2) div label:hover {
+    background: #262d96;
+    border-radius: .5em;
+    transition: .2s ease;
+
+  }
+
+
+  ul.people li:not(.person),
+  ul.animals li:not(.animal),
+  ul.items li:not(.item)
+{
+      display: none;
+  }
+
+
+/* ///////////////////////////// */
+/* /////   Movie Items   ///// /*/
+/* /////////////////// /////////*/
+
+ul:last-of-type {
+    list-style: none;
+    font-family: var(--main-font);
+
+    margin: auto;
+    width: 100%;
+    display: block;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: repeat(4, 350px);
+    column-gap: 15px;
+    row-gap: 30px;
+    color: #fff;
+    max-width: 80em;
+
+    height: 100%;
+    overflow-y: auto;
+}
+
+ul:last-of-type  li {
+    /* text-align: center; */
+    margin: auto;
+    padding: 1.5em;
+    transition: .2s ease;
+    /* cursor: pointer; */
+
+}
+
+/* ul:first-of-type li:hover {
+    transform: scale(1.05);
+    transition: .2s ease;
+    background-color: #0d1218;
+    border-radius: 1em;
+} */
+
+ul:last-of-type  li img {
+    max-width: 100%;
+    border-radius: .8em;
+    margin-bottom: 1em;
+}
+
+/* mediaqueries */
+
+@media screen and (min-width: 480px) {
+    ul:last-of-type  {
+        margin: auto;
+        max-width: 80em;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-rows: repeat(4, 350px);
+        column-gap: 30px;
+        row-gap: 1%;
+        color: #fff;
+    } 
+    
+}
+
+@media screen and (min-width: 599px) {
+  ul:last-of-type  {
+      margin: auto;
+      max-width: 80em;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-template-rows: repeat(4, 350px);
+      column-gap: 30px;
+      row-gap: 10em;
+      color: #fff;
+  } 
+  
+}
+
+@media screen and (min-width: 733px) {
+  ul:last-of-type  {
+      margin: auto;
+      max-width: 80em;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-template-rows: repeat(4, 350px);
+      column-gap: 30px;
+      row-gap: 1em;
+      color: #fff;
+  } 
+  
+}
+
+@media screen and (min-width: 943px) {
+  ul:last-of-type  {
+      margin: auto;
+      max-width: 80em;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      grid-template-rows: repeat(4, 350px);
+      column-gap: 30px;
+      row-gap: 4em;
+      color: #fff;
+  } 
+  
+}
+/* //////////////////////////////////////////////// */
+/* /////   Favorite button inside list-item  ///// /*/
+/* /////////////////// ////////////////////////////*/
+
+ul:last-of-type  li button {
+    color: white;
+    background:none;
+    background-color: #4F5E72;
+    border:none;
+    border-radius: 2em;
+    cursor:pointer;
+    margin-right: -6em;
+    margin-top: -6em;
+
+  }
+
+  ul:last-of-type  li  button.wish {   
+    grid-column-start:2;
+    grid-row-start:1;
+    justify-self:flex-end;
+
+    width: 1.5em;
+    height: 1.5em;
+    font-size:2em;
+    line-height:1em;
+  }
+  
+  ul:last-of-type  li  button.wish:hover {
+    background-color:#415269;
+  }
+
+/* ///////////////////////////// */
+/* ///// wishlist ul ///// /*/
+/* /////////////////// /////////*/
+
+section:first-of-type  {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: var(--bright-clr);
+	padding: 1rem;
+	transform: translateX(100%);
+	transition: .5s;
+  z-index: 100;
+}
+
+section:first-of-type  div {
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+section:first-of-type  h2 {
+  font-family: var(--main-font);
+}
+
+section:first-of-type.is-open {
+	transform: translateX(0);
+}
+
+section:first-of-type button:first-of-type {
+  font-size: 2em;
+  border: none;
+  background:none;
+}
