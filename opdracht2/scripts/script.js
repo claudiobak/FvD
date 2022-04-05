@@ -2,18 +2,18 @@
 // document.querySelector
 
 var filterAll = document.querySelector("#filter-all");
-var filterPeople = document.querySelector("#filter-people");
-var filterAnimals = document.querySelector("#filter-animals");
-var filterItems = document.querySelector("#filter-items");
+var filterPopular = document.querySelector("#filter-popular");
+var filterAction = document.querySelector("#filter-action");
+var filterComedy = document.querySelector("#filter-comedy");
 
 /* 2. laat de radio buttons luisteren naar wijzigingen */
 // addEventListener
 // roep dan steeds dezelfde functie aan
 
 filterAll.addEventListener("change", filterenMaar);
-filterPeople.addEventListener("change", filterenMaar);
-filterAnimals.addEventListener("change", filterenMaar);
-filterItems.addEventListener("change", filterenMaar);
+filterPopular.addEventListener("change", filterenMaar);
+filterAction.addEventListener("change", filterenMaar);
+filterComedy.addEventListener("change", filterenMaar);
 
 /* 3. maak die functie aan */
 // zoek de ul op en stop die in een variabele
@@ -28,9 +28,9 @@ function filterenMaar(event) {
   
   // oude class weghalen - ik weet alleen niet welke van de 4 - daarom allemaal
   deLijst.classList.remove("all");
-  deLijst.classList.remove("people");
-  deLijst.classList.remove("animals");
-  deLijst.classList.remove("items");
+  deLijst.classList.remove("popular");
+  deLijst.classList.remove("action");
+  deLijst.classList.remove("comedy");
   
   // nieuwe class toevoegen
   deLijst.classList.add(hetNieuweFilter);
@@ -41,7 +41,7 @@ function filterenMaar(event) {
 /* de opties om het zoeken te initialiseren */
 var options = {
   // de classes van de h2's en p's (daarin gaat gezocht worden naar matches)
-  valueNames: [ 'name', 'movie' ]
+  valueNames: [ 'name', 'streaming-service' ]
 };
 
 /* het daadwerkelijk initialiseren van het zoeken */
@@ -246,14 +246,6 @@ closeButton.addEventListener('click', (event) => {
 	// event.target.nextElementSibling.classList.remove('is-open')
 
 });
-
-
-
-
-
-
-
-
 
 
 

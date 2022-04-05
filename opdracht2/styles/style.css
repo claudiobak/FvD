@@ -5,11 +5,41 @@
     /* colors*/
     --main-clr: #151E2A;
     --light-clr: white;
+	--header-font-clr: white;
     --secondary-clr:#464D57;
     --bright-clr: #555FF1;
+	--bright-hover-clr: #262d96;
+	--dark-clr: #000307;
+	--grey-clr: #4F5E72;
+	--grey-secondary-clr: #415269;
+	--category-btn-font-clr: #151E2A;
 
 }
 
+/* switch naar lightmode als de gebruiker lightmode prefereert*/
+@media (prefers-color-scheme: light) {
+
+	:root {
+		/* fonts */
+		--main-font: 'Poppins', sans-serif;
+	
+		/* colors*/
+		--main-clr: #ffffff;
+		--light-clr: rgb(19, 26, 43);
+		--header-font-clr: white;
+		--secondary-clr:#464D57;
+		--bright-clr: #555FF1;
+		--bright-hover-clr: #262d96;
+		--dark-clr: #202731;
+		--grey-clr: #b3ccec;
+		--grey-secondary-clr: #415269;
+		--category-btn-font-clr: white;
+
+	}
+	
+}
+
+/* CSS remedy */
 *,
 *::before,
 *::after {
@@ -32,8 +62,7 @@ header {
     display: flex;
     justify-content: space-between;
 
-    /* background-color: #141a24; */
-    background-color: #000307;
+    background-color: var(--dark-clr);
     position: fixed;
     width: 100%;
     z-index: 91;
@@ -42,10 +71,10 @@ header {
 
 
 h1 {
-    font-family: var(--main-font);
-    color: var(--light-clr);
-    font-size: 2em;
-    padding: 1em 1em 0em 1em;
+	font-family: var(--main-font);
+    color: var(--header-font-clr);
+    font-size: 1.5em;
+    padding: 1.5em 1em 0em 1em;
 
 }
 
@@ -63,23 +92,16 @@ h1 {
 
 main header a {
     position:relative;
-    /* padding:.125em .375em; */
-    /* padding: 1.125em .375em; */
     padding: 0.125em 0.675em;
     border-radius:.25rem;
     font-size:2em;
-    /* line-height:1em; */
     line-height: 3em;
     text-decoration:none;
-    color: #fff;
+    color: var(--header-font-clr);
 }
   
-/* main header a:hover {
-    background-color:var(--hover-color);
-}   */
 
-
-/* met js wort de class updates toegevoegd als de koopknop of hartje wordt geklikt */
+/* met js wort de class updates toegevoegd als er op het hartje wordt geklikt */
 /* dan wordt de animatie geactiveerd */
 main header a.updated {
     animation-name:updating;
@@ -95,13 +117,12 @@ main header a.updated {
 main header a span {
     position:absolute;
     right: 1em;
-    /* top:-.125em; */
     top: 2.875em;
 
     min-width:1.25em;
     padding:0 .25em;
     
-    background-color: #555FF1;
+    background-color: var(--bright-clr);
     border-radius:.625em;
     
     font-size:.375em;
@@ -115,9 +136,9 @@ main header a span {
     display:none;
   }
   
-  /* indien de waarde van de span in de winkelwagen groter dan 0 is */
+  /* indien de waarde van de span in van het hartje groter dan 0 is */
   /* wordt met JS de class 'positive' toegevoegd */
-  /* die kan hier gebruikt worden om het rode bolletje te tonen */
+  /* die kan hier gebruikt worden om het paarse bolletje te tonen */
   main header a span.positive {
     display:block;
   }
@@ -132,8 +153,9 @@ main header a span {
   aside {
     top:0;
     padding: 1em;
-    color: white;
+    color: var(--light-clr);
     padding-top: 8em;
+	text-align: center;
   }
   
   aside input {
@@ -143,8 +165,8 @@ main header a span {
     padding: .5em;
     border-radius: .5em;
     font-size: 1em;
-    color: white;
-    background-color: #4F5E72;
+    color: var(--light-clr);
+    background-color: var(--grey-clr);
     font-family: var(--main-font);
     border: none;
 
@@ -159,23 +181,26 @@ main header a span {
     width: 1em;   
   }
 
+  aside input::placeholder {
+	color: var(--dark-clr);
+  }
+  
+/* Remove cancel button inside searchbar */
+  input[type = 'search']::-webkit-search-cancel-button{
+	-webkit-appearance: none;	
+  }
 /* ///////////////////////////// */
 /* ///// Category filter ///// /*/
 /* /////////////////// /////////*/
 
 section:nth-of-type(2) {
-    /* padding: 1em; */
-    padding: 0 calc((100% - 80em) / 2);
-
-    /* margin-bottom: 2em; */
-    margin-bottom: 10em;
+    padding: 0 calc((100% - 33em) / 2);
     width: 100%;
 }
 
 
 section:nth-of-type(2) div {
     float: left;
-    /* margin: 0 5px 0 0; */
     width: 100px;
     height: 40px;
     position: relative;
@@ -214,22 +239,23 @@ section:nth-of-type(2) div label {
     z-index: 90;
     line-height: 2.4em;
     transition: .2s ease;
-    background-color: #4F5E72;
+    background-color: var(--grey-clr);
     border-radius: .5em;
+	color: var(--category-btn-font-clr);
 
   }
 
   section:nth-of-type(2) div label:hover {
-    background: #262d96;
+    background: var(--bright-hover-clr);
     border-radius: .5em;
     transition: .2s ease;
 
   }
 
 
-  ul.people li:not(.person),
-  ul.animals li:not(.animal),
-  ul.items li:not(.item)
+  ul.popular li:not(.popular),
+  ul.action li:not(.action),
+  ul.comedy li:not(.comedy)
 {
       display: none;
   }
@@ -250,34 +276,59 @@ ul:last-of-type {
     grid-template-rows: repeat(4, 350px);
     column-gap: 15px;
     row-gap: 30px;
-    color: #fff;
+    color: var(--light-clr);
     max-width: 80em;
 
     height: 100%;
     overflow-y: auto;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+ul:last-of-type::-webkit-scrollbar {
+	display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  ul:last-of-type {
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+  }
+
 ul:last-of-type  li {
-    /* text-align: center; */
     margin: auto;
     padding: 1.5em;
     transition: .2s ease;
-    /* cursor: pointer; */
-
 }
 
-/* ul:first-of-type li:hover {
+ul:first-of-type li:hover {
     transform: scale(1.05);
     transition: .2s ease;
-    background-color: #0d1218;
     border-radius: 1em;
-} */
+}
 
 ul:last-of-type  li img {
     max-width: 100%;
     border-radius: .8em;
-    margin-bottom: 1em;
+	margin-bottom: 1.5em;
 }
+
+ul:last-of-type li h2{
+	margin-top: -2em;
+	font-size: 1.3em;
+}
+
+ul:last-of-type li p {
+	font-weight: 400;
+}
+
+
+
+ul:last-of-type li h2,
+ul:last-of-type li p
+{
+	text-align: end;
+}
+
 
 /* mediaqueries */
 
@@ -290,7 +341,7 @@ ul:last-of-type  li img {
         grid-template-rows: repeat(4, 350px);
         column-gap: 30px;
         row-gap: 1%;
-        color: #fff;
+        color: var(--light-clr);
     } 
     
 }
@@ -304,8 +355,8 @@ ul:last-of-type  li img {
       grid-template-rows: repeat(4, 350px);
       column-gap: 30px;
       row-gap: 10em;
-      color: #fff;
-  } 
+	  color: var(--light-clr);
+	} 
   
 }
 
@@ -318,8 +369,8 @@ ul:last-of-type  li img {
       grid-template-rows: repeat(4, 350px);
       column-gap: 30px;
       row-gap: 1em;
-      color: #fff;
-  } 
+	  color: var(--light-clr);
+	} 
   
 }
 
@@ -332,18 +383,33 @@ ul:last-of-type  li img {
       grid-template-rows: repeat(4, 350px);
       column-gap: 30px;
       row-gap: 4em;
-      color: #fff;
-  } 
+	  color: var(--light-clr);
+	} 
   
 }
+
+@media screen and (min-width: 1110px) {
+	ul:last-of-type  {
+		margin: auto;
+		max-width: 80em;
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		grid-template-rows: repeat(4, 350px);
+		column-gap: 30px;
+		row-gap: 0em;
+        color: var(--light-clr);
+	} 
+	
+  }
+
 /* //////////////////////////////////////////////// */
 /* /////   Favorite button inside list-item  ///// /*/
 /* /////////////////// ////////////////////////////*/
 
 ul:last-of-type  li button {
-    color: white;
+    color: var(--light-clr);
     background:none;
-    background-color: #4F5E72;
+    background-color: var(--grey-clr);
     border:none;
     border-radius: 2em;
     cursor:pointer;
@@ -364,7 +430,7 @@ ul:last-of-type  li button {
   }
   
   ul:last-of-type  li  button.wish:hover {
-    background-color:#415269;
+    background-color:var(--grey-secondary-clr);
   }
 
 /* ///////////////////////////// */
@@ -404,4 +470,13 @@ section:first-of-type button:first-of-type {
   font-size: 2em;
   border: none;
   background:none;
+}
+
+footer {
+	height: 3em;
+	background-color: var(--grey-clr);
+	color: var(--light-clr);
+	font-family: var(--main-font);
+	text-align: center;
+	padding: .5em;
 }
