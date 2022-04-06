@@ -88,7 +88,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   films te like zodat ze op je favorite-list komen te staan (waar je ze vervolgens ook weer kan verwijderen).
 
   ### Je ontwerp:
-  <img src="readme-images/schetsideeopdracht2.png" width="375px" alt="ontwerp opdracht 2">
+  <img src="readme-images/schetsideeopdracht2.png" width="100%" alt="ontwerp opdracht 2">
 
 
   ### Je ambitie: 
@@ -308,8 +308,8 @@ grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
 
   Wat ik nog had kunne toevoegen was een blokje met de prefers-reduced motion zodat als de gebruiker geen animaties wilt, hij of zij deze ook niet te zien krijgt.
 
-  /* Tone down the animation to avoid vestibular motion triggers like scaling or panning large objects. */
   ```css
+  /* Tone down the animation to avoid vestibular motion triggers like scaling or panning large objects. */
   ul:first-of-type li:hover {
     transform: scale(1.05);
     transition: .2s ease;
