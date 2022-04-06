@@ -175,7 +175,14 @@ section:nth-of-type(2) {
 }
 ```
 
-
+En als laatst had ik een probleem met mijn list-items, namelijk dat als er maar 1 list item in de list stond vulde dit list-item de hele pagina. Dit bleek te komen omdat ik in de code van mijn grid in plaats van autofill, auto-fit had geschreven:
+```css
+grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+```
+Juiste code:
+```css
+grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+```
 
   ### Bevinding 3:
   Er is nog geen light & darkmodus feature.
@@ -183,11 +190,100 @@ section:nth-of-type(2) {
   #### oplossing:
   Dit heb ik opgelost door in de CSS een block aan te maken met userpreference: lightmode. Hier heb ik vervolgens de root ingezet met de juiste kleuren voor de lightmode.
 
+  ```css
+  :root {
+  /* fonts */
+  --main-font: 'Poppins', sans-serif;
+
+    /* colors*/
+  --main-clr: #151E2A;
+  --light-clr: white;
+	--header-font-clr: white;
+  --secondary-clr:#464D57;
+  --bright-clr: #555FF1;
+	--bright-hover-clr: #262d96;
+	--dark-clr: #000307;
+	--grey-clr: #4F5E72;
+	--grey-secondary-clr: #415269;
+	--category-btn-font-clr: #151E2A;
+
+}
+
+/* switch naar lightmode als de gebruiker lightmode prefereert*/
+@media (prefers-color-scheme: light) {
+
+	:root {
+		/* fonts */
+		--main-font: 'Poppins', sans-serif;
+	
+		/* colors*/
+		--main-clr: #ffffff;
+		--light-clr: rgb(19, 26, 43);
+		--header-font-clr: white;
+		--secondary-clr:#464D57;
+		--bright-clr: #555FF1;
+		--bright-hover-clr: #262d96;
+		--dark-clr: #202731;
+		--grey-clr: #b3ccec;
+		--grey-secondary-clr: #5b87c0;
+		--category-btn-font-clr: white;
+
+	}
+	
+}
+  ```
+
   ### Bevinding 4:
   Het toevoegen van films aan de favorite-list werkte ook nog niet helemaal.
 
   #### oplossing:
   Dit heb ik opgelost door de Javascript te verbeteren en ervoor te zorgen dat als de user de film uit de favorieten lijst haalt, ook het hartje weer leeg wordt.
+
+  ```javascript
+  function removeFromWishlist(event){
+  console.log(event.target)
+  let li = event.target.closest("li");
+  li.remove();
+  var clickedHeart = event.target;
+  let movieId = li.id;
+  const movieFromList = document.getElementById(movieId);
+  const heart = movieFromList.querySelector('button');
+  console.log(movieFromList);
+  
+  
+  if (clickedHeart.innerHTML == "♡") {
+    /* het lege hartje vervangen door het hele hartje */
+    clickedHeart.innerHTML = "&#10084;";
+    heart.innerHTML = "&#10084;";
+    
+    /* het aria-label wijzigen van toevoegen naar verwijderen */
+    clickedHeart.setAttribute("aria-label", "Remove from Favorites");
+    
+    /* en dan de functie aanroepen om de wishlist aan te passen */
+    /* in dit geval moet er liefde bij */
+    /* vandaar 'plus' */
+    updateWishlist("plus");
+  }
+  else{
+    
+    // voeg hier toe dat nummers naast hartje verwijderd worden na klikken op hartje in wishlist
+    
+    /* het hartje vervangen door het gebroken hartje */
+    heart.innerHTML = "♡";
+     clickedHeart.innerHTML = "♡";
+    
+    
+     /* het aria-label wijzigen van verwijderen naar toevoegen */
+     clickedHeart.setAttribute("aria-label", "Add to Favorites");
+     
+     /* en dan de functie aanroepen om de love-list aan te passen */
+     /* in dit geval moet er liefde af */
+     /* vandaar 'min' */
+     updateWishlist("min");
+  }
+  
+}
+  ```
 
 </details>
 

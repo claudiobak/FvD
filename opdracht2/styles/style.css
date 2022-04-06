@@ -1,13 +1,13 @@
 :root {
-    /* fonts */
-    --main-font: 'Poppins', sans-serif;
+  /* fonts */
+  --main-font: 'Poppins', sans-serif;
 
     /* colors*/
-    --main-clr: #151E2A;
-    --light-clr: white;
+  --main-clr: #151E2A;
+  --light-clr: white;
 	--header-font-clr: white;
-    --secondary-clr:#464D57;
-    --bright-clr: #555FF1;
+  --secondary-clr:#464D57;
+  --bright-clr: #555FF1;
 	--bright-hover-clr: #262d96;
 	--dark-clr: #000307;
 	--grey-clr: #4F5E72;
@@ -155,7 +155,7 @@ main header a span {
     padding: 1em;
     color: var(--light-clr);
     padding-top: 8em;
-	text-align: center;
+	  text-align: center;
   }
   
   aside input {
