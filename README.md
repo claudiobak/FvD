@@ -10,6 +10,11 @@ Markdown cheat cheet: [Hulp bij het schrijven van Markdown](https://github.com/a
 Nb. De standaardstructuur en de spartaanse opmaak van de README.md zijn helemaal prima. Het gaat om de inhoud van je procesverslag. Besteedt de tijd voor pracht en praal aan je website.
 
 Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard open zetten. Fijn om dat steeds voor de relevante stuk(ken) te doen. -->
+## Bronnenlijst
+* https://www.svgrepo.com/svg/3878/tree-silhouette
+* https://codepen.io/shooft/pen/gOXgGMK
+* https://codepen.io/shooft/pen/QWOdqEP
+* https://codepen.io/shooft/pen/qBjXQmb
 
 ## Opdracht 1 plan
 
@@ -112,7 +117,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   ### Bevinding 1:
   De zoekfunctie werkte nog niet helemaal doordat ik list.js niet goed werkend kreeg.
   #### oplossing:
-  Uiteindelijk bleek het een fout in de link te zijn en had ik mijn Javascript ook niet helemaal goed getypt, nadat ik de juiste link had toegevoegd en de Javascript herschreven had was dit probleem verholpen.
+  Uiteindelijk bleek het een fout in de link te zijn en heb ik ook de link in de body gezet in deze volgorde:
+
+  ```javascript
+  
+  <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+
+ <script src="https://hammerjs.github.io/dist/hammer.js"></script>
+
+ <script src="./scripts/script.js"></script>
+ ```
 
 
   ### Bevinding 2:
@@ -120,6 +134,47 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### oplossing:
   Ik heb dit opgelost door met mediaqueries de grid aan te passen zodat de layout van 1 column naar 2 columns ging, en op nog grotere schermen naar 3 columnen.
+```css
+  /* mediaqueries */
+
+@media screen and (min-width: 480px) {
+    ul:last-of-type  {
+        margin: auto;
+        max-width: 80em;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        grid-template-rows: repeat(4, 350px);
+        column-gap: 30px;
+        row-gap: 1%;
+        color: var(--light-clr);
+    } 
+    
+}
+```
+
+Ook heb ik de searchbar samen met de categorie filters in het midden van de pagina gezet. Dit heb ik gedaan met de volgende code:
+
+```css
+
+/* searchbar */
+/* Hier heb ik een text-align: center; waardoor de searchbar in het midden ging staan. */
+  aside {
+    top:0;
+    padding: 1em;
+    color: var(--light-clr);
+    padding-top: 8em;
+	  text-align: center;
+  }
+
+
+/* category filters */
+/* Hier heb ik doormiddel van de padding de filters weten te centreren op de pagina. */
+section:nth-of-type(2) {
+    padding: 0 calc((100% - 33em) / 2);
+    width: 100%;
+}
+```
+
 
 
   ### Bevinding 3:
@@ -154,6 +209,25 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   ### Dit was lastig/Is niet gelukt:
   Wat ik erg lastig vond was het werkend maken van de favoritelist. Dit kwam omdat ik uiteindelijk vast liep op het gedeelte waarbij de user een film uit de favorite-list heeft gehaald. Het hartje moest namelijk ook weer leeg worden. Uiteindelijk is dit me toch gelukt.
+
+  Wat ik nog had kunne toevoegen was een blokje met de prefers-reduced motion zodat als de gebruiker geen animaties wilt, hij of zij deze ook niet te zien krijgt.
+
+  /* Tone down the animation to avoid vestibular motion triggers like scaling or panning large objects. */
+  ```css
+  ul:first-of-type li:hover {
+    transform: scale(1.05);
+    transition: .2s ease;
+    border-radius: 1em;
+  }
+
+  @media (prefers-reduced-motion) {
+    ul:first-of-type li:hover {
+      transform: none;
+      transition: none;
+      border-radius: 1em;
+    }
+  }
+```
 </details>
 
 ## Bronnen plaatjes:
