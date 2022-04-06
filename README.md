@@ -299,9 +299,109 @@ grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   <img src="readme-images/opdracht2-smallscreen.png" width="375px" alt="uitkomst opdracht 2">
   <img src="readme-images/opdracht2-favlist.png" width="375px" alt="uitkomst opdracht 2">
 
+  ### Dark-mode:
+  #### Large screen
+  <img src="readme-images/largedarkscreenopdracht2.png" width="375px" alt="uitkomst opdracht 2 largescreen">
+  <img src="readme-images/largefavlistscreenlightopdracht2.png" width="375px" alt="uitkomst opdracht 2 largescreen darkmode">
+
+
+  #### Small screen
+  <img src="readme-images/smallscreendarkopdracht2.png" width="375px" alt="uitkomst opdracht 2">
+  <img src="readme-images/smallscreenfavlistopdracht2.png" width="375px" alt="uitkomst opdracht 2 largescreen darkmode">
+
+  ### Light-mode:
+  #### Large screen
+  <img src="readme-images/largelightscreenopdracht2.png" width="375px" alt="uitkomst opdracht 2 largescreen lightmode">
+
+  #### Small screen
+  <img src="readme-images/smallscreenlightopdracht2.png" width="375px" alt="uitkomst opdracht 2 smallscreen lightmode">
+
+
 
   ### Dit ging goed/Heb ik geleerd: 
-  De CSS ging erg goed. Ik heb zo de dark/lightmodus weten te implementeren, ook heb ik alles volledig responsive gekregen. Voor de layout heb ik weer Grid gebruikt omdat ik dit persoonlijk erg prettig vind werken samen met de mediaqueries.
+  De CSS ging erg goed. Ik heb zo de dark/lightmodus weten te implementeren, ook heb ik alles volledig responsive gekregen. Voor de layout heb ik weer Grid gebruikt omdat ik dit persoonlijk erg prettig vind werken samen met de mediaqueries. Ik heb grid geleerd tijdens het vak Front-end in het eerste blok en sindsdien gebruik ik het eigenlijk altijd om mijn websites te bouwen. Ook Het toevoegen en het verwijderen van favorieten aan de favorite-list is ook gelukt, hier keek ik in het begin erg tegen op, echter ik ben blij dat ik het werkend heb gekregen.
+
+  Grid die ik heb gebruikt:
+  ```css
+  ul:last-of-type {
+    list-style: none;
+    font-family: var(--main-font);
+
+    margin: auto;
+    width: 100%;
+    display: block;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-rows: repeat(4, 350px);
+    column-gap: 15px;
+    row-gap: 30px;
+    color: var(--light-clr);
+    max-width: 80em;
+
+    height: 100%;
+    overflow-y: auto;
+}
+```
+
+Dark en light mode doormiddel van user-prefreference en root in de CSS:
+```css
+:root {
+  /* fonts */
+  --main-font: 'Poppins', sans-serif;
+
+    /* colors*/
+  --main-clr: #151E2A;
+  --light-clr: white;
+	--header-font-clr: white;
+  --secondary-clr:#464D57;
+  --bright-clr: #555FF1;
+	--bright-hover-clr: #262d96;
+	--dark-clr: #000307;
+	--grey-clr: #4F5E72;
+	--grey-secondary-clr: #415269;
+	--category-btn-font-clr: #151E2A;
+
+}
+
+/* switch naar lightmode als de gebruiker lightmode prefereert*/
+@media (prefers-color-scheme: light) {
+
+	:root {
+		/* fonts */
+		--main-font: 'Poppins', sans-serif;
+	
+		/* colors*/
+		--main-clr: #ffffff;
+		--light-clr: rgb(19, 26, 43);
+		--header-font-clr: white;
+		--secondary-clr:#464D57;
+		--bright-clr: #555FF1;
+		--bright-hover-clr: #262d96;
+		--dark-clr: #202731;
+		--grey-clr: #b3ccec;
+		--grey-secondary-clr: #5b87c0;
+		--category-btn-font-clr: white;
+
+	}
+	
+}
+```
+
+Klein stukje Javascript ES6 met arrow function i.p.v. traditionele functie:
+```javascript
+// wishlist openen
+const openButton = document.querySelector('#open');
+const closeButton = document.querySelector('#close');
+const menu = document.querySelector('#favlist');
+
+openButton.addEventListener('click', (event) => {
+	menu.classList.add('is-open')
+} );
+									 
+closeButton.addEventListener('click', (event) => {
+	menu.classList.remove('is-open')
+});
+```
+
 
   ### Dit was lastig/Is niet gelukt:
   Wat ik erg lastig vond was het werkend maken van de favoritelist. Dit kwam omdat ik uiteindelijk vast liep op het gedeelte waarbij de user een film uit de favorite-list heeft gehaald. Het hartje moest namelijk ook weer leeg worden. Uiteindelijk is dit me toch gelukt.
