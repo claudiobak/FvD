@@ -421,6 +421,18 @@ closeButton.addEventListener('click', (event) => {
     }
   }
 ```
+Ook had ik nog ```css :focus-within``` aan elementen kunnen toevoegen zodat de webpagina toegankelijker wordt.
+
+```css
+button.wish {
+border: none;  
+}
+
+form:focus-within {
+border: solid 1em var(--bright-clr);  
+
+}
+```
 </details>
 
 ## Bronnen plaatjes:
