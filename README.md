@@ -295,9 +295,6 @@ grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   <summary>uitwerken bij afronden opdracht (voor week 8)</summary>
 
   ### Je uitkomst - karakteristiek screenshot(s):
-  <img src="readme-images/imgopdracht2-page.png" width="375px" alt="uitkomst opdracht 2">
-  <img src="readme-images/opdracht2-smallscreen.png" width="375px" alt="uitkomst opdracht 2">
-  <img src="readme-images/opdracht2-favlist.png" width="375px" alt="uitkomst opdracht 2">
 
   ### Dark-mode:
   #### Large screen
